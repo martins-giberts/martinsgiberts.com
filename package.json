@@ -52,7 +52,7 @@
     "eslint": "./node_modules/eslint/bin/eslint.js ./app",
     "test": "jest -o",
     "test:all:dev": "yarn validate-webpack:dev && yarn eslint && jest",
-    "test:all:prod": "yarn validate-webpack:dev && yarn eslint && jest",
+    "test:all:prod": "yarn validate-webpack:prod && yarn eslint && jest",
     "validate-webpack:dev": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=dev",
     "validate-webpack:prod": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=prod",
     "build:dev": "yarn test && webpack --env=dev --progress --profile --colors",

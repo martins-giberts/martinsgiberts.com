@@ -31,15 +31,15 @@ body {
   align-items: center;
   height: 100vh;
   box-sizing: border-box;
-  border-top: 40px solid $there_we_could_sail;
-  border-left: 40px solid $there_we_could_sail;
-  border-right: 40px solid $drift_in_dreams;
-  border-bottom: 40px solid $drift_in_dreams;
+  border: 5px dashed $there_we_could_sail;
+  border-radius: 20px;
 }
 
 h1 {
-  margin-bottom: 0.5em;
-  font-size: 3em;
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 4em;
+  margin-right: -0.5em;
 }
 
 a {
