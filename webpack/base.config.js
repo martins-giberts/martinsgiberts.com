@@ -26,6 +26,13 @@ module.exports = function (env) {
 
     context: resolve(__dirname, '../app'),
 
+    externals: {
+      'cheerio': 'window',
+      'react/addons': 'react',
+      'react/lib/ExecutionEnvironment': 'react',
+      'react/lib/ReactContext': 'react',
+    },
+
     module: {
       loaders : [
         {
