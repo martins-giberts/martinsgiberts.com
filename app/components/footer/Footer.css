@@ -1,0 +1,13 @@
+@import "../../styles/grid";
+
+.footer {
+  @extend container;
+  flex-grow: 0;
+  padding: 0.5rem;
+
+  .cell {
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+  }
+}

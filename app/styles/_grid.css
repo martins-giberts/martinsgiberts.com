@@ -1,0 +1,17 @@
+@define-extend container {
+  flex: 1 100%;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+@define-extend cell {
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+  box-sizing: border-box;
+}
+
+.container { @extend container; }
+.cell { @extend cell; }

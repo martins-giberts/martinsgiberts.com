@@ -1,22 +1,6 @@
 @import "../../styles/colors";
 
 .link {
-  font-size:4em;
   color: $there_we_could_sail;
   display: inline-block;
-  padding: 0.2em;
-
-  &:hover {
-    color: $drift_in_dreams;
-    animation-name: scale;
-    animation-duration:2s;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease-in-out;
-  }
-}
-
-@keyframes scale{
-  from {-webkit-transform: scale(1.0);}
-  45% {-webkit-transform: scale(0.8);}
-  to {-webkit-transform: scale(1.0);}
 }

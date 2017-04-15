@@ -1,0 +1,20 @@
+@import "../../styles/media";
+@import "../../styles/grid";
+
+.header {
+  @extend container;
+  flex-direction: column;
+  flex-grow: 0;
+
+  .cell {
+    justify-content: center;
+    text-align: center;
+
+    @media (--vertical) {
+      padding:1rem 1rem 0;
+    }
+    @media (--horisontal) {
+      padding: 1rem;
+    }
+  }
+}
