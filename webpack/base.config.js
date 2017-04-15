@@ -47,7 +47,7 @@ module.exports = function (env) {
           test: /\.css$/,
           loaders: [
             'style-loader',
-            'css-loader?modules&localIdentName=[path]___[local]___[hash:base64:5]',
+            'css-loader?modules&localIdentName=[path][local]-[hash:base64:5]',
             'postcss-loader',
           ],
         },

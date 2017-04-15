@@ -1,0 +1,74 @@
+@import "../../styles/media";
+@import "../../styles/colors";
+@import "../../styles/grid";
+
+.feature {
+  @extend container;
+  display:flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  font-size: 1.6rem;
+
+  .link, .text, .button {
+    @extend cell;
+    flex-grow: 0;
+  }
+
+  .link {
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    display: block;
+    text-align: justify;
+    flex-grow: 1;
+  }
+
+  .button {
+    justify-content: flex-end;
+    margin-top: 1rem;
+    a {
+      display: block;
+      color: $white;
+      background-color: $there_we_could_sail;
+      height: 4.4rem;
+      border-radius: 4.4rem;
+      line-height: 4.4rem;
+      padding: 0 2.5rem;
+    }
+  }
+}
+
+@media (--medium) {
+  .feature {
+    padding: 2rem;
+
+    .link {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (--desktop) {
+  .link {
+    justify-content: center;
+    text-align: center;
+    font-size: 6rem;
+    line-height: 6rem;
+    margin: 2rem 0;
+  }
+
+  .feature {
+    .button {
+      margin-top: 2rem;
+      a {
+        height: 2.4rem;
+        border-radius: 2.4rem;
+        line-height: 2.4rem;
+        padding: 0 1.5rem;
+      }
+    }
+  }
+}

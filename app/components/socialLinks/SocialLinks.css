@@ -1,0 +1,39 @@
+@import "../../styles/grid";
+@import "../../styles/media";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell {
+  flex-basis: inherit;
+}
+
+@media (--medium) {
+  @media (--horisontal) {
+    .cell {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media (--large) {
+  .container {
+    margin-top: 2rem;
+  }
+
+  .cell {
+    flex-basis: 50%;
+  }
+}
+
+@media (--desktop) {
+  .cell {
+    flex-basis: 25%;
+  }
+}
+
+/*.cell {
+
+}*/

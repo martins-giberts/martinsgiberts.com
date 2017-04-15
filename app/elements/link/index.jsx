@@ -10,7 +10,9 @@ const Link = ({
     className={styles.link}
     href={href}
     target={target}
-  >{children}</a>
+  >
+    {children}
+  </a>
 
 Link.propTypes = {
   children: PropTypes.any,
