@@ -4,7 +4,7 @@ import styles from './Link.css'
 
 const Link = ({
   children,
-  href,
+  href = '#',
   target = '_blank',
 }) =>
   <a

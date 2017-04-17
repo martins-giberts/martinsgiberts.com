@@ -9,12 +9,10 @@
   .cell {
     justify-content: center;
     text-align: center;
+    padding: 1rem;
 
     @media (--vertical) {
       padding:1rem 1rem 0;
-    }
-    @media (--horisontal) {
-      padding: 1rem;
     }
   }
 }
