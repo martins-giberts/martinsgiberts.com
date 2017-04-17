@@ -2,7 +2,6 @@
 @import "../../styles/media";
 
 .container {
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -33,7 +32,3 @@
     flex-basis: 25%;
   }
 }
-
-/*.cell {
-
-}*/
