@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Header test should render without throwing an error 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="cell"
+  >
+    <Feature
+      link="#linkedin"
+      name="linkedin"
+      text="
+          <p>Test link 1</p>
+        "
+    />
+  </div>
+  <div
+    className="cell"
+  >
+    <Feature
+      link="#instagram"
+      name="instagram"
+      text="
+          <p>Test link 2</p>
+        "
+    />
+  </div>
+</div>
+`;

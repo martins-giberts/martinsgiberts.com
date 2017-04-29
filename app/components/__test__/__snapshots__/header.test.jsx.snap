@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Header test should render without throwing an error 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="cell"
+  >
+    <Title
+      Kind="h1"
+    >
+      Martins Giberts
+    </Title>
+  </div>
+  <div
+    className="cell"
+  >
+    <Title
+      Kind="h2"
+    >
+      Web applications developer
+    </Title>
+  </div>
+</div>
+`;

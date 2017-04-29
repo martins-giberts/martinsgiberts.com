@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Footer test should render without throwing an error 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="cell"
+  >
+    Martins Giberts © 2017
+  </div>
+</div>
+`;

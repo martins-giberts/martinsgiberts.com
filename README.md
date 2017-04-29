@@ -20,6 +20,7 @@ My contact information page
 - `Yarn build:dev` - run jest for changed files based on git make development build
 
 # Other scripts
+- `Yarn coverage` - show Jest tests coverage on projects ./App folder
 - `Yarn eslint` - run linter
 - `Yarn start:prod` - start webpack dev server with production settings
 - `Yarn test:all:dev` - run webpack config validator, eslint and jest for all tests in development environment
