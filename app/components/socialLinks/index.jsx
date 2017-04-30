@@ -1,5 +1,5 @@
 import React from 'react'
-import content from './contentData'
+import content from '../../../content/socialLinks'
 import Feature from '../../elements/feature'
 import styles from './SocialLinks.css'
 

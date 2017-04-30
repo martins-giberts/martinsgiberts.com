@@ -24,6 +24,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.0",
     "enzyme": "2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
@@ -39,6 +40,7 @@
     "precss": "1.4.0",
     "react-addons-test-utils": "^15.5.1",
     "react-hot-loader": "3.0.0-beta.6",
+    "react-test-renderer": "^15.5.4",
     "style-loader": "^0.16.1",
     "uglify-js": "^2.8.22",
     "uglifyjs-webpack-plugin": "^0.4.3",
@@ -49,16 +51,17 @@
     "webpack2-validator": "1.0.0"
   },
   "scripts": {
-    "start": "yarn build:dev && webpack-dev-server --env=dev --hot --inline",
-    "start:prod": "yarn build:prod && webpack-dev-server --env=prod",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./app",
-    "test": "jest -o",
-    "test:all:dev": "yarn validate-webpack:dev && yarn eslint && jest",
-    "test:all:prod": "yarn validate-webpack:prod && yarn eslint && jest",
-    "validate-webpack:dev": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=dev",
-    "validate-webpack:prod": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=prod",
     "build:dev": "yarn test && webpack --env=dev --progress --profile --colors",
-    "build:prod": "yarn test && webpack --env=prod --progress --profile --colors"
+    "build:prod": "yarn test && webpack --env=prod --progress --profile --colors",
+    "coverage": "jest --coverage --config ./jest.json",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./app",
+    "start:prod": "yarn build:prod && webpack-dev-server --env=prod",
+    "start": "yarn build:dev && webpack-dev-server --env=dev --hot --inline",
+    "test:all:dev": "yarn validate-webpack:dev && yarn eslint && jest --config ./jest.json",
+    "test:all:prod": "yarn validate-webpack:prod && yarn eslint && jest --config ./jest.json",
+    "test": "jest -o --config ./jest.json",
+    "validate-webpack:dev": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=dev",
+    "validate-webpack:prod": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=prod"
   },
   "jest": {
     "modulePaths": [

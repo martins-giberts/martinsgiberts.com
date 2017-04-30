@@ -5,6 +5,7 @@ var {resolve} = require('path')
 
 var BUILD_DIR = resolve(__dirname, '../build')
 var APP_DIR = resolve(__dirname, '../app')
+var CONTENT_DIR = resolve(__dirname, '../content')
 
 module.exports = function (env) {
   return {
@@ -37,7 +38,7 @@ module.exports = function (env) {
       loaders : [
         {
           test : /\.jsx?/,
-          include : APP_DIR,
+          include : [APP_DIR, CONTENT_DIR],
           loaders : [
             'babel-loader'
           ],
