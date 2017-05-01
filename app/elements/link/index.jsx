@@ -1,12 +1,19 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Link.css'
+
+type props = {
+  children?: mixed,
+  href: string,
+  target?: '_blank' | '_self',
+}
 
 const Link = ({
   children,
   href = '#',
   target = '_blank',
-}) =>
+}: props) =>
   <a
     className={styles.link}
     href={href}
@@ -14,11 +21,5 @@ const Link = ({
   >
     {children}
   </a>
-
-Link.propTypes = {
-  children: PropTypes.any,
-  href: PropTypes.string,
-  target: PropTypes.string,
-}
 
 export default Link

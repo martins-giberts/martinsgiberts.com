@@ -1,0 +1,9 @@
+[ignore]
+./build
+
+[include]
+./app
+
+[libs]
+
+[options]

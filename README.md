@@ -22,6 +22,8 @@ My contact information page
 # Other scripts
 - `Yarn coverage` - show Jest tests coverage on projects ./App folder
 - `Yarn eslint` - run linter
+- `Yarn flow:all` - Check all the files
+- `Yarn flow` - Run flow
 - `Yarn start:prod` - start webpack dev server with production settings
 - `Yarn test:all:dev` - run webpack config validator, eslint and jest for all tests in development environment
 - `Yarn test:all:prod` - run webpack config validator, eslint and jest for all tests in production environment
