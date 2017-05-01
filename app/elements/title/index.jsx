@@ -1,18 +1,19 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import styles from './Title.css'
+
+type props = {
+  children: mixed,
+  Kind: string,
+}
 
 const Title = ({
   children,
   Kind,
-}) =>
+}: props) =>
   <Kind className={[styles.title, styles[Kind]].join(' ')} >
     {children}
   </Kind>
-
-Title.propTypes = {
-  children: PropTypes.any,
-  Kind: PropTypes.string.isRequired,
-}
 
 export default Title

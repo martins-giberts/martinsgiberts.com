@@ -1,9 +1,16 @@
+// @flow
+
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from '../link'
 import styles from './Feature.css'
 
-const Feature = ({name, link, text}) =>
+type props = {
+  name: string,
+  link: string,
+  text: string,
+}
+
+const Feature = ({name, link, text}: props) =>
   <div className={styles.feature}>
     <div className={styles.link}>
       <Link href={link}>
@@ -15,11 +22,5 @@ const Feature = ({name, link, text}) =>
       <Link href={link}>Open</Link>
     </div>
   </div>
-
-Feature.propTypes =  {
-  name: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-}
 
 export default Feature
