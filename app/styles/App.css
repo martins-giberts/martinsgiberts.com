@@ -12,7 +12,6 @@
 }
 
 .app {
-  display: flex;
   position: relative;
   color: $there_we_could_sail;
   font-family: 'Open Sans', sans-serif;
