@@ -7,7 +7,7 @@ exports[`components/Footer test should render without throwing an error 1`] = `
   <div
     className="cell"
   >
-    Martins Giberts © 2017
+    Martins Giberts © 2018
   </div>
 </div>
 `;

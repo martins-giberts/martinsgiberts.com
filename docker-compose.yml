@@ -1,0 +1,14 @@
+version: '3.2'
+
+services:
+  web:
+    image: node:9.4.0-alpine
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=dev
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 8080:8080
+    command: "yarn start:dev:docker"
