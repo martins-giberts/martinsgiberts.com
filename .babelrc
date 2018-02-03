@@ -2,8 +2,7 @@
   "presets": [
     ["es2015", {"modules": false}],
     "stage-2",
-    "react",
-    "flow"
+    "react"
   ],
   "plugins": [
     "react-hot-loader/babel",
