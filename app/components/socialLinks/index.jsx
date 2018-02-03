@@ -1,17 +1,15 @@
 import React from 'react'
 import content from '../../../content/socialLinks'
 import Feature from '../../elements/feature'
-import styles from './SocialLinks.css'
+import {Wrapper, Item} from './styled'
 
 const SocialLinks = () =>
-  <div className={styles.container}>
-    {content.map((params, key) => {
-      return  (
-        <div className={styles.cell} key={key}>
-          <Feature {...params} />
-        </div>
-      )
-    })}
-  </div>
+  <Wrapper>
+    {content.map((params, key) => (
+      <Item key={key}>
+        <Feature {...params} />
+      </Item>
+    ))}
+  </Wrapper>
 
 export default SocialLinks
