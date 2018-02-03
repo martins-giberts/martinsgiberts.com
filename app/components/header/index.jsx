@@ -1,19 +1,19 @@
 import React from 'react'
 import Title from '../../elements/title'
-import styles from './Header.css'
+import {Wrapper, HeaderSection} from './styled'
 
 const Header = () =>
-  <div className={styles.header}>
-    <div className={styles.cell}>
-      <Title Kind={'h1'}>
+  <Wrapper>
+    <HeaderSection>
+      <Title kind={'h1'}>
         Martins Giberts
       </Title>
-    </div>
-    <div className={styles.cell}>
-      <Title Kind={'h2'}>
+    </HeaderSection>
+    <HeaderSection>
+      <Title kind={'h2'}>
         Web applications developer
       </Title>
-    </div>
-  </div>
+    </HeaderSection>
+  </Wrapper>
 
 export default Header

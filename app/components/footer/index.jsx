@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './Footer.css'
+import {Wrapper, Cell} from './styled'
 
 const Footer = () =>
-  <div className={styles.footer}>
-    <div className={styles.cell}>
+  <Wrapper>
+    <Cell>
       Martins Giberts © 2018
-    </div>
-  </div>
+    </Cell>
+  </Wrapper>
 
 export default Footer

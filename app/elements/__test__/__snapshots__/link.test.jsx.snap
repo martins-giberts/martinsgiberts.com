@@ -2,7 +2,7 @@
 
 exports[`elements/Link test should render custom without throwing an error 1`] = `
 <a
-  className="link"
+  className="sc-bdVaJa UwVzb"
   href="#"
   target="_self"
 >
@@ -14,8 +14,6 @@ exports[`elements/Link test should render custom without throwing an error 1`] =
 
 exports[`elements/Link test should render defaults without throwing an error 1`] = `
 <a
-  className="link"
-  href="#"
-  target="_blank"
+  className="sc-bdVaJa UwVzb"
 />
 `;
