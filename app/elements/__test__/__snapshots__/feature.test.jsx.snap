@@ -1,37 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`elements/Feature test should render defaults without throwing an error 1`] = `
-<div
-  className="feature"
->
-  <div
-    className="link"
-  >
-    <Link
+<styled.div>
+  <styled.div>
+    <styled.a
       href="#"
     >
       <i
         aria-hidden="true"
         className="fa fa-Test Feature"
       />
-    </Link>
-  </div>
-  <div
-    className="text"
+    </styled.a>
+  </styled.div>
+  <styled.div
     dangerouslySetInnerHTML={
       Object {
         "__html": "Test text",
       }
     }
   />
-  <div
-    className="button"
-  >
-    <Link
+  <styled.div>
+    <styled.a
       href="#"
     >
       Open
-    </Link>
-  </div>
-</div>
+    </styled.a>
+  </styled.div>
+</styled.div>
 `;

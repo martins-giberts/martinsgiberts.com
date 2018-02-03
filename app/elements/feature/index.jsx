@@ -1,26 +1,24 @@
-// @flow
-
 import React from 'react'
 import Link from '../link'
-import styles from './Feature.css'
+import {
+  Wrapper,
+  Icon,
+  Text,
+  Button,
+  ButtonLink
+} from './styled'
 
-type props = {
-  name: string,
-  link: string,
-  text: string,
-}
-
-const Feature = ({name, link, text}: props) =>
-  <div className={styles.feature}>
-    <div className={styles.link}>
+const Feature = ({name, link, text}) =>
+  <Wrapper>
+    <Icon>
       <Link href={link}>
         <i className={`fa fa-${name}`} aria-hidden="true"></i>
       </Link>
-    </div>
-    <div className={styles.text} dangerouslySetInnerHTML={{__html: text}} />
-    <div className={styles.button}>
-      <Link href={link}>Open</Link>
-    </div>
-  </div>
+    </Icon>
+    <Text dangerouslySetInnerHTML={{__html: text}} />
+    <Button>
+      <ButtonLink href={link}>Open</ButtonLink>
+    </Button>
+  </Wrapper>
 
 export default Feature

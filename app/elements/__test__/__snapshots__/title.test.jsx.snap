@@ -1,17 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`elements/Title test should have prop className title h2 1`] = `
-<h2
-  className="title h2"
->
+<styled.h1>
   Heading
-</h2>
+</styled.h1>
 `;
 
 exports[`elements/Title test should render H1 without throwing an error 1`] = `
-<h1
-  className="title h1"
->
+<styled.h1>
   Heading
-</h1>
+</styled.h1>
 `;

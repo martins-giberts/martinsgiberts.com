@@ -1,5 +1,0 @@
-@custom-media --medium only screen and (min-width: 48em);
-@custom-media --large only screen and (min-width: 64em);
-@custom-media --desktop only screen and (min-width: 75em);
-@custom-media --vertical only screen and (orientation:portrait);
-@custom-media --horisontal only screen and (orientation:landscape);

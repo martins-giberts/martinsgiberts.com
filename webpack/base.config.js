@@ -22,7 +22,7 @@ module.exports = function (env) {
     },
 
     resolve: {
-      extensions: [".js", ".jsx", ".css"]
+      extensions: [".js", ".jsx"]
     },
 
     context: resolve(__dirname, '../app'),
@@ -43,14 +43,6 @@ module.exports = function (env) {
             'babel-loader'
           ],
           exclude: /node_modules/
-        },
-        {
-          test: /\.css$/,
-          loaders: [
-            'style-loader',
-            'css-loader?modules&localIdentName=[path][local]-[hash:base64:5]',
-            'postcss-loader',
-          ],
         },
         {
           test: /\.html$/,

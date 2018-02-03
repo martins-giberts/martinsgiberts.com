@@ -1,13 +1,14 @@
-@import "../../styles/grid";
+import {Container, Cell} from '../grid'
 
-.footer {
-  @extend container;
+export const Wrapper = Container.extend`
   flex-grow: 0;
   padding: 0.5rem;
 
-  .cell {
+  ${Cell} {
     justify-content: center;
     text-align: center;
     padding-top: 2rem;
   }
-}
+`
+
+export {Cell}
