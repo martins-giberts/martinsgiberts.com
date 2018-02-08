@@ -3,16 +3,15 @@ version: '2'
 services:
   web:
     build: .
-    user: node
     working_dir: /code
     environment:
       - NODE_ENV=dev
     volumes:
       - .:/code
-      - api-deps:/code/node_modules
+      - npm:/code/node_modules
     ports:
       - 8080:8080
     command: "yarn start"
 
 volumes:
-  api-deps:
+  npm:
