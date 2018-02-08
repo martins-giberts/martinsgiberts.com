@@ -8,7 +8,6 @@ LICENSE
 .gitignore
 docker-compose.yml
 DockerFile
-index.html
 README.md
 yarn.lock
 coverage

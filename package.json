@@ -48,37 +48,16 @@
     "webpack2-validator": "1.0.0"
   },
   "scripts": {
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:prod": "yarn test:all:prod && webpack --env=prod --progress --profile --colors",
-    "coverage": "jest --coverage --config ./jest.json",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./app",
-    "start:prod": "yarn build:prod && webpack-dev-server --env=prod",
-    "start:dev:docker": "yarn && yarn build:dev && yarn start",
-    "start": "webpack-dev-server --host 0.0.0.0 --env=dev --hot --inline  --colors",
-    "test:all:dev": "yarn validate-webpack:dev && yarn eslint && jest --config ./jest.json",
-    "test:all:prod": "yarn validate-webpack:prod && yarn eslint && jest --config ./jest.json",
-    "test": "jest -o --config ./jest.json",
-    "validate-webpack:dev": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=dev",
-    "validate-webpack:prod": "./node_modules/webpack2-validator/dist/bin/webpack-validator.js webpack.config.js --env=prod"
-  },
-  "jest": {
-    "modulePaths": [
-      "/app"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "moduleDirectories": [
-      "node_modules"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css)$": "identity-obj-proxy"
-    },
-    "unmockedModulePathPatterns": [
-      "node_modules/react/",
-      "node_modules/enzyme/"
-    ]
+    "dev-server": "webpack-dev-server --host 0.0.0.0 --hot --inline  --colors",
+    "webpack": "webpack --progress --profile --colors",
+    "build:prod": "yarn test:all --env=prod && yarn webpack --env=prod",
+    "start:prod": "yarn build:prod && yarn dev-server --env=prod",
+    "start:dev:docker": "yarn webpack --env=dev && yarn start",
+    "start": "yarn dev-server --env=dev",
+    "eslint": "eslint ./app",
+    "test:all": "yarn eslint && jest && yarn validate-webpack",
+    "test": "jest -o",
+    "test:watch": "jest --watch",
+    "validate-webpack": "webpack2-validator webpack.config.js"
   }
 }

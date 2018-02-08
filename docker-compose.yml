@@ -13,5 +13,16 @@ services:
       - 8080:8080
     command: "yarn start"
 
+  # Run Jest watch on seperate container
+  # jest:
+  #   build: .
+  #   working_dir: /code
+  #   environment:
+  #     - NODE_ENV=dev
+  #   volumes:
+  #     - .:/code
+  #     - npm:/code/node_modules
+  #   command: "yarn test:watch"
+
 volumes:
   npm:
