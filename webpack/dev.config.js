@@ -1,9 +1,9 @@
-var {resolve} = require('path')
-var webpack = require('webpack')
+const {resolve} = require('path')
+const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./base.config.js')
 
-module.exports = function (env) {
+module.exports = function () {
   return webpackMerge(commonConfig(), {
     entry: [
       'webpack-dev-server/client?http://localhost:8080',

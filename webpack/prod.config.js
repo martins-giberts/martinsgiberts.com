@@ -1,8 +1,8 @@
-var webpack = require('webpack')
+const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
 const commonConfig = require('./base.config.js')
 
-module.exports = function (env) {
+module.exports = function () {
   return webpackMerge(commonConfig(), {
     output: {
      filename: '[name].[chunkhash].js',

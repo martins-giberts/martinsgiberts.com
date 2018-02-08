@@ -1,11 +1,11 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var WebpackCleanupPlugin = require('webpack-cleanup-plugin')
-var webpack = require('webpack')
-var {resolve} = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackCleanupPlugin = require('webpack-cleanup-plugin')
+const webpack = require('webpack')
+const {resolve} = require('path')
 
-var BUILD_DIR = resolve(__dirname, '../build')
-var APP_DIR = resolve(__dirname, '../app')
-var CONTENT_DIR = resolve(__dirname, '../content')
+const BUILD_DIR = resolve(__dirname, '../build')
+const APP_DIR = resolve(__dirname, '../app')
+const CONTENT_DIR = resolve(__dirname, '../content')
 
 module.exports = function (env) {
   return {
