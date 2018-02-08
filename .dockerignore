@@ -1,0 +1,17 @@
+# Logs
+logs
+*.log
+
+CNAME
+LICENSE
+.git
+.gitignore
+docker-compose.yml
+DockerFile
+index.html
+README.md
+yarn.lock
+coverage
+
+build
+node_modules
