@@ -2,22 +2,26 @@
 
 exports[`components/Header test should render without throwing an error 1`] = `
 <styled.div>
-  <styled.div>
+  <styled.div
+    key="0"
+  >
     <Feature
       link="#linkedin"
       name="linkedin"
       text="
-          <p>Test link 1</p>
-        "
+      <p>Test link 1</p>
+    "
     />
   </styled.div>
-  <styled.div>
+  <styled.div
+    key="1"
+  >
     <Feature
       link="#instagram"
       name="instagram"
       text="
-          <p>Test link 2</p>
-        "
+      <p>Test link 2</p>
+    "
     />
   </styled.div>
 </styled.div>
