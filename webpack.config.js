@@ -12,7 +12,7 @@ module.exports = {
 
   output: {
     filename: '[name].[hash].bundle.js',
-    path: path.resolve(__dirname, 'assets')
+    path: path.resolve(__dirname, 'docs/assets')
   },
 
   resolve: {
@@ -23,7 +23,7 @@ module.exports = {
     host: '0.0.0.0',
     inline: true,
     hot: true,
-    contentBase: path.resolve(__dirname, './assets'),
+    contentBase: path.resolve(__dirname, 'docs/assets'),
     stats: 'errors-only',
     compress: true
   },
@@ -52,7 +52,7 @@ module.exports = {
       template: path.resolve(__dirname, './src/template.html'),
       filename: path.resolve(__dirname, './docs/index.html'),
     }),
-    new CleanWebpackPlugin(['assets']),
+    new CleanWebpackPlugin(['docs/assets']),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ]
