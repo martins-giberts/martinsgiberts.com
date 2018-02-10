@@ -8,8 +8,8 @@ exports[`App test should render without throwing an error 1`] = `
       "backgroundInverse": "#3B8686",
       "fontStyles": Object {
         "primary": "
-            font-family: 'Open Sans', sans-serif;
-          ",
+        font-family: 'Open Sans', sans-serif;
+      ",
       },
       "media": Object {
         "desktop": "75em",

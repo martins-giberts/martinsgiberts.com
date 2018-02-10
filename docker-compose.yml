@@ -5,7 +5,7 @@ services:
     build: .
     working_dir: /code
     environment:
-      - NODE_ENV=dev
+      - NODE_ENV=development
     volumes:
       - .:/code
       - npm:/code/node_modules
@@ -18,7 +18,7 @@ services:
   #   build: .
   #   working_dir: /code
   #   environment:
-  #     - NODE_ENV=dev
+  #     - NODE_ENV=development
   #   volumes:
   #     - .:/code
   #     - npm:/code/node_modules

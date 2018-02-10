@@ -12,8 +12,8 @@ My contact information page and FE playground
 
 ## Local machine
 - open project directory in CMD
-- `Yarn`
-- `Yarn start`
+- `yarn`
+- `yarn start`
 - Open `localhost:8080`
 
 ## Docker
@@ -22,15 +22,4 @@ My contact information page and FE playground
 - Open `localhost:8080`
 
 # Build static html (For Git pages)
-- `Yarn build:prod` - run jest for changed files based on git and make production build
-- `Yarn build:dev` - run jest for changed files based on git make development build
-
-# Other scripts
-- `Yarn coverage` - show Jest tests coverage on projects ./App folder
-- `Yarn eslint` - run linter
-- `Yarn start:prod` - start webpack dev server with production settings
-- `Yarn test:all:dev` - run webpack config validator, eslint and jest for all tests in development environment
-- `Yarn test:all:prod` - run webpack config validator, eslint and jest for all tests in production environment
-- `Yarn test` - run jest for only changed files based on git
-- `Yarn validate-webpack:dev` - validate webpack config in development environment
-- `Yarn validate-webpack:prod` - validate webpack config in production environment
+- `yarn build` - run jest for changed files based on git and make build. It will generate bundle in `./assets` and index.html in `./docs`

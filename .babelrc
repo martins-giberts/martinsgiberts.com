@@ -1,13 +1,18 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
-    "stage-2",
+    ["env", {"modules": false}],
     "react"
   ],
   "plugins": [
-    "react-hot-loader/babel",
-    "syntax-dynamic-import",
-    "dynamic-import-node",
-    "transform-es2015-modules-commonjs"
-  ]
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      "presets": ["env", "react"],
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "syntax-dynamic-import"
+      ]
+    }
+  }
 }
