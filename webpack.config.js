@@ -7,12 +7,12 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
 
   entry: {
-    app: ['react-hot-loader/patch', './index.js']
+    app: ['react-hot-loader/patch', './index.jsx']
   },
 
   output: {
     filename: '[name].[hash].bundle.js',
-    path: path.resolve(__dirname, 'docs/assets')
+    path: path.resolve(__dirname, 'docs')
   },
 
   resolve: {
@@ -23,7 +23,7 @@ module.exports = {
     host: '0.0.0.0',
     inline: true,
     hot: true,
-    contentBase: path.resolve(__dirname, 'docs/assets'),
+    contentBase: false,
     stats: 'errors-only',
     compress: true
   },
@@ -52,7 +52,7 @@ module.exports = {
       template: path.resolve(__dirname, './src/template.html'),
       filename: path.resolve(__dirname, './docs/index.html'),
     }),
-    new CleanWebpackPlugin(['docs/assets']),
+    new CleanWebpackPlugin(['docs/*.js', 'docs/index.html']),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ]
