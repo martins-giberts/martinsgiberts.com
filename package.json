@@ -1,6 +1,6 @@
 {
   "name": "martins-giberts.github.io",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "index.js",
   "repository": "https://github.com/martins-giberts/martins-giberts.github.io.git",
   "author": "Martins Giberts <martins.giberts@gmail.com>",
@@ -16,7 +16,7 @@
     "babel-loader": "7.1.2",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.18",
     "enzyme": "^3.3.0",
