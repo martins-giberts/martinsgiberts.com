@@ -17,7 +17,8 @@ render(App)
 
 // Hot Module Replacement API
 if (module.hot) {
-  console.log('COMING IN HOT')
-  const app = './App';
-  module.hot.accept(app, () => { render(App) });
+  module.hot.accept('./App.jsx', () => {
+    const NextApp = require('./App').default;
+    render(NextApp)
+  });
 }

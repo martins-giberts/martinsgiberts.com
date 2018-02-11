@@ -24,7 +24,7 @@ module.exports = {
     inline: true,
     hot: true,
     contentBase: false,
-    // stats: 'errors-only',
+    stats: 'errors-only',
     compress: true
   },
 
