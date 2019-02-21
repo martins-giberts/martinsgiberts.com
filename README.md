@@ -1,4 +1,4 @@
-# martinsg.info (martins-giberts.github.io)
+# martinsgiberts.com (martins-giberts.github.io)
 My contact information page and FE playground
 
 # Prerequisites
