@@ -1,14 +1,13 @@
 import styled from 'styled-components';
-import { Theme } from '../../theme';
 import { Container, Cell } from '../grid';
-import media from '../../themeMedia';
+import { media } from '../theme';
 import Link from '../link';
 
 export const FeatureCell = styled(Cell)`
   flex-grow: 0;
 `;
 
-export const Icon = styled(FeatureCell)`
+export const IconContainer = styled(FeatureCell)`
   font-size: 5rem;
   line-height: 5rem;
   margin-bottom: 1rem;
@@ -28,11 +27,11 @@ export const Icon = styled(FeatureCell)`
 
 export const Text = styled(FeatureCell)`
   display: block;
-  text-align: justify;
+  text-align: left;
   flex-grow: 1;
 `;
 
-export const Button = styled(FeatureCell)`
+export const ButtonContainer = styled(FeatureCell)`
   justify-content: flex-end;
   margin-top: 1rem;
 
@@ -42,8 +41,8 @@ export const Button = styled(FeatureCell)`
 `;
 
 export const ButtonLink = styled(Link)`
-  color: ${(props: { theme: Theme }) => props.theme.primaryInverse};
-  background-color: ${(props: { theme: Theme }) => props.theme.backgroundInverse};
+  color: ${props => props.theme.primaryInverse};
+  background-color: ${props => props.theme.backgroundInverse};
   height: 4.4rem;
   border-radius: 4.4rem;
   line-height: 4.4rem;

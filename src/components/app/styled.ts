@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import media from './themeMedia';
+import { media } from '../theme';
 
 // eslint-disable-next-line no-unused-expressions
 export const GlobalStyles = createGlobalStyle`

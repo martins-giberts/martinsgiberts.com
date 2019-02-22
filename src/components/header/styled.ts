@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Container, Cell } from '../grid';
-import media from '../../themeMedia';
+import { media } from '../theme';
 
 export const Wrapper = styled(Container)`
   flex-direction: column;

@@ -3,7 +3,7 @@ import { Wrapper, Cell } from './styled';
 
 const Footer: React.StatelessComponent = () => (
   <Wrapper>
-    <Cell>Martins Giberts © 2018</Cell>
+    <Cell>Martins Giberts © 2019</Cell>
   </Wrapper>
 );
 

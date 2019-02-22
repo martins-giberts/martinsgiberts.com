@@ -2,7 +2,7 @@ import * as React from 'react';
 import Title from '../title';
 import { Wrapper, HeaderSection } from './styled';
 
-const Header = () => (
+const Header: React.StatelessComponent = () => (
   <Wrapper>
     <HeaderSection>
       <Title kind={'h1'}>Martins Giberts</Title>
