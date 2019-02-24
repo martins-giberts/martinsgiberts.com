@@ -3,7 +3,6 @@ import Footer from '../footer';
 import Header from '../header';
 import SocialLinks from '../socialLinks';
 import { Wrapper, AppContainer } from './styled';
-
 import ThemeProvider from '../theme/theme-provider';
 
 const App: React.StatelessComponent = () => (
