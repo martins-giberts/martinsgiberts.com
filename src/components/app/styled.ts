@@ -1,12 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { media } from '../theme';
-
-// eslint-disable-next-line no-unused-expressions
-export const GlobalStyles = createGlobalStyle`
-  * { margin: 0; padding: 0; text-decoration: none; }
-  html { font-size: 62.5%; }
-  body { font-size: 1.4rem; }
-`;
 
 export const Wrapper = styled.div`
   color: ${props => props.theme.primary};
