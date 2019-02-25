@@ -64,6 +64,10 @@ export const Wrapper = styled(Container)`
   ${media.medium`
     padding: 2rem;
   `}
+
+  ${media.desktop`
+    height: 32rem;
+  `}
 `;
 
 export { Cell };

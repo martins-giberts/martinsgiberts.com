@@ -5,6 +5,10 @@ import { media } from '../theme';
 export const Wrapper = styled(Container)`
   flex-wrap: wrap;
 
+  ${media.desktop`
+    align-items: center;
+  `}
+
   ${media.large`
     margin-top: 2rem;
   `}

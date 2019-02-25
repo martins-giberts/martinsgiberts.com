@@ -19,7 +19,7 @@ export type ThemeMediaEntryProps = {
   [key: string]: Theme | unknown;
 };
 
-export type ThemeMediaInterpolation = Interpolation<ThemedStyledProps<{ theme: Theme }, Theme>>;
+export type ThemeMediaInterpolation = Interpolation<ThemedStyledProps<any, Theme>>;
 
 export type ThemeMediaEntry = (
   first: TemplateStringsArray | CSSObject,
