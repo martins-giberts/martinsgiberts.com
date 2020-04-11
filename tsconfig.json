@@ -13,6 +13,6 @@
     "jsx": "react",
     "allowJs": false,
     "skipLibCheck": true,
-    "sourceMap": true,
+    "sourceMap": true
   }
 }
