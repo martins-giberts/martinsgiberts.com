@@ -35,7 +35,7 @@
     "build": "yarn build-dll && webpack --config webpack/webpack.config.ts",
     "build:prod": "NODE_ENV=production yarn build",
     "dev": "yarn build-dll && webpack-dev-server --config webpack/webpack.config.ts",
-    "prettier": "prettier --write '**/*.{ts,tsx, md, json}'"
+    "prettier": "prettier --write '**/*.{ts,tsx,md,json}'"
   },
   "prettier": {
     "printWidth": 120,
@@ -51,8 +51,7 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx, md, json}": [
-      "yarn lint --fix",
+    "*.{ts,tsx,md,json}": [
       "yarn prettier"
     ]
   }
