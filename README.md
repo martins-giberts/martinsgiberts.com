@@ -21,12 +21,6 @@ My contact information page and FE playground
 - `yarn start`
 - Open `localhost:8080`
 
-### Docker
-
-- open project directory in CMD
-- `docker-compose up`
-- Open `localhost:8080`
-
 ## Build static html (For Git pages)
 
 - `yarn build` - run jest for changed files based on git and make build. It will generate bundle in `./assets` and index.html in `./docs`

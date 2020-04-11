@@ -27,10 +27,6 @@
     "react-test-renderer": "16.8.3",
     "ts-config": "^20.9.0",
     "ts-loader": "^5.3.3",
-    "tslint": "^5.13.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^3.6.0",
     "typescript": "^3.3.3333",
     "webpack": "4.29.5",
     "webpack-cli": "^3.2.3",
@@ -41,7 +37,6 @@
     "build": "yarn build-dll && webpack --config webpack/webpack.config.ts",
     "build:prod": "NODE_ENV=production yarn build",
     "dev": "yarn build-dll && webpack-dev-server --config webpack/webpack.config.ts",
-    "lint": "tslint --project tsconfig.json -c tslint.json",
     "prettier": "prettier --write '**/*.{ts,tsx, md}'"
   },
   "prettier": {
@@ -53,7 +48,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && yarn build:prod && git add .",
+      "pre-commit": "lint-staged",
       "commit-msg": "echo $HUSKY_GIT_PARAMS"
     }
   },
