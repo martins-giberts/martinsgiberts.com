@@ -1,34 +1,16 @@
 import { css, DefaultTheme, CSSObject, Interpolation, ThemedStyledProps } from 'styled-components';
-import palette from './palette';
+import { Palette } from './palette';
 
-export type ThemeInterfaceEntry = string | number | CSSObject | ThemeFontStyles;
+export type MediaTypes = 'medium' | 'large' | 'desktop' | 'vertical' | 'horizontal';
 
-export interface ThemeInterface extends DefaultTheme {
-  [key: string]: ThemeInterfaceEntry;
-}
+export type ThemeMediaInterpolation = Interpolation<ThemedStyledProps<{}, DefaultTheme>>;
 
-export interface ThemeFontStyles extends ThemeInterface {
-  primary: string;
-}
-
-export interface Theme extends ThemeInterface {
-  [key: string]: ThemeInterfaceEntry | ThemeFontStyles;
-}
-
-export type ThemeMediaEntryProps = {
-  [key: string]: Theme | unknown;
+export type ThemeMedia = {
+  [mediaKey in MediaTypes]: (
+    first: TemplateStringsArray | CSSObject,
+    ...interpolations: ThemeMediaInterpolation[]
+  ) => ThemeMediaInterpolation;
 };
-
-export type ThemeMediaInterpolation = Interpolation<ThemedStyledProps<any, Theme>>;
-
-export type ThemeMediaEntry = (
-  first: TemplateStringsArray | CSSObject,
-  ...interpolations: ThemeMediaInterpolation[]
-) => ThemeMediaInterpolation;
-
-export interface ThemeMedia {
-  [key: string]: ThemeMediaEntry;
-}
 
 export const media: ThemeMedia = {
   medium: (...args) => css`
@@ -58,15 +40,14 @@ export const media: ThemeMedia = {
   `,
 };
 
-const theme: Theme = {
-  primary: palette.there_we_could_sail,
-  background: palette.white,
-  primaryInverse: palette.white,
-  backgroundInverse: palette.there_we_could_sail,
+const theme: DefaultTheme = {
+  primary: Palette.thereWeCouldSail,
+  background: Palette.white,
+  primaryInverse: Palette.white,
+  backgroundInverse: Palette.thereWeCouldSail,
+
   fontStyles: {
-    primary: `
-        font-family: 'Open Sans', sans-serif;
-      `,
+    primary: `font-family: 'Open Sans', sans-serif;`,
   },
 };
 

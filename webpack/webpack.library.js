@@ -1,7 +1,8 @@
+//@ts-check
+
 const path = require('path');
 const webpack = require('webpack');
-const getEnv = require('./get-env.ts').getEnv;
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const getEnv = require('./get-env').getEnv;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {

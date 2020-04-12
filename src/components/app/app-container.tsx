@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { StyledComponent } from 'styled-components';
+import styled from 'styled-components';
 import { media } from '../theme';
 
 const getContainerSize = ({ docHeight }: { docHeight: number }): string => {
@@ -12,7 +12,7 @@ const getContainerSize = ({ docHeight }: { docHeight: number }): string => {
   return '';
 };
 
-const StyledAppContainer: StyledComponent<'div', any, { docHeight?: number }, never> = styled.div`
+const StyledAppContainer = styled.div`
   ${props => props.theme.fontStyles.primary}
   ${getContainerSize}
   position: relative;
@@ -29,10 +29,10 @@ const Container: React.StatelessComponent = ({ children }) => {
   const [docHeight, setDocHeight] = React.useState(window.innerHeight);
 
   React.useEffect(() => {
-    const handleResize = () => setDocHeight(window.innerHeight);
+    const handleResize = (): void => setDocHeight(window.innerHeight);
     window.addEventListener('resize', handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return (): void => window.removeEventListener('resize', handleResize);
   });
 
   return <StyledAppContainer docHeight={docHeight}>{children}</StyledAppContainer>;

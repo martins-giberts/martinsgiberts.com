@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const getEnv = require('./get-env.ts').getEnv;
+const getEnv = require('./get-env').getEnv;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
