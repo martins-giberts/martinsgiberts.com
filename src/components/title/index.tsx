@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { H1, H2 } from './styled';
+import { StyledComponent } from 'styled-components';
 
 export type HeaderKind = 'h2' | 'h1';
 
-const getHeader = (kind: HeaderKind) => {
+const getHeader = (kind: HeaderKind): StyledComponent<'h2' | 'h1', {}> => {
   switch (kind) {
     case 'h2':
       return H2;
