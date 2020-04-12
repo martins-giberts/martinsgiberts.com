@@ -2,10 +2,10 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    primary: Palette;
-    background: Palette;
-    primaryInverse: Palette;
-    backgroundInverse: Palette;
+    primary: string;
+    background: string;
+    primaryInverse: string;
+    backgroundInverse: string;
 
     fontStyles: {
       primary: string;
