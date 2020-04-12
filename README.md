@@ -18,13 +18,7 @@ My contact information page and FE playground
 
 - open project directory in CMD
 - `yarn`
-- `yarn start`
-- Open `localhost:8080`
-
-### Docker
-
-- open project directory in CMD
-- `docker-compose up`
+- `yarn dev`
 - Open `localhost:8080`
 
 ## Build static html (For Git pages)
