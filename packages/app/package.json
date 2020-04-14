@@ -1,24 +1,41 @@
 {
-  "name": "martins-giberts.github.io",
+  "name": "@martins-giberts.github.io/app",
   "version": "2.0.1",
   "main": "index.js",
+  "private": true,
   "repository": "https://github.com/martins-giberts/martins-giberts.github.io.git",
   "author": "Martins Giberts <martins.giberts@gmail.com>",
   "license": "GPL-3.0",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
   "devDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.0.1",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
+    "add-asset-html-webpack-plugin": "^3.1.3",
+    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
     "husky": "^4.2.5",
     "lerna": "^3.20.2",
     "lint-staged": "^10.1.3",
+    "path": "^0.12.7",
     "prettier": "^2.0.4",
     "ts-config": "^20.10.0",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
     "build-dll": "webpack --config webpack/webpack.library.js",
