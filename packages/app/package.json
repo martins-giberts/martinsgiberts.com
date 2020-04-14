@@ -1,6 +1,6 @@
 {
   "name": "@martins-giberts.github.io/app",
-  "version": "2.0.1",
+  "version": "0.0.1",
   "main": "index.js",
   "private": true,
   "repository": "https://github.com/martins-giberts/martins-giberts.github.io.git",
