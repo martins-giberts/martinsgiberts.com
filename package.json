@@ -31,7 +31,7 @@
     "build-bundle": "webpack --config webpack/webpack.config.js",
     "build:dev": "export NODE_ENV=development && yarn build-dll && yarn build-bundle",
     "build": "export NODE_ENV=production && yarn build-dll && yarn build-bundle",
-    "dev": "yarn build:dev && NODE_ENV=development webpack-dev-server --mode development --config webpack/webpack.config.js",
+    "dev": "yarn lerna run dev --scope @martins-giberts.github.io/app --stream",
     "format": "prettier --write '**/*.{ts,tsx,md,json,js,jsx,css}'",
     "format:verify": "prettier --list-different '**/*.{ts,tsx,md,json,js,jsx,css}'",
     "lint": "yarn eslint -c .eslintrc.js . && ./node_modules/.bin/lerna run --parallel lint"

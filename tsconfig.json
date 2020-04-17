@@ -1,30 +1,3 @@
 {
-  "extends": "./node_modules/ts-config/tsconfig.json",
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": true,
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "outDir": "lib",
-    "rootDir": "src",
-    "lib": ["dom", "es2017"],
-    "noImplicitAny": true,
-    "module": "esnext",
-    "target": "es5",
-    // "target": "es2017",
-    "jsx": "react",
-    "allowJs": false,
-    "skipLibCheck": true,
-    "sourceMap": true
-  }
+  "extends": "../../tsconfig.settings.json"
 }
