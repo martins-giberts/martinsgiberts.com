@@ -46,13 +46,12 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && lint-staged",
-      "pre-push": "format:verify",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{ts,tsx,md,json,js,jsx,css}": [
-      "yarn format"
+      "yarn format:verify"
     ]
   }
 }
