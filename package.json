@@ -1,11 +1,17 @@
 {
   "name": "martins-giberts.github.io",
   "version": "2.0.1",
+  "private": true,
   "main": "index.js",
   "repository": "https://github.com/martins-giberts/martins-giberts.github.io.git",
   "author": "Martins Giberts <martins.giberts@gmail.com>",
   "license": "GPL-3.0",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "eslint": "^6.8.0",
@@ -28,7 +34,7 @@
     "dev": "yarn build:dev && NODE_ENV=development webpack-dev-server --mode development --config webpack/webpack.config.js",
     "format": "prettier --write '**/*.{ts,tsx,md,json,js,jsx,css}'",
     "format:verify": "prettier --list-different '**/*.{ts,tsx,md,json,js,jsx,css}'",
-    "lint": "eslint -c .eslintrc.js --ignore-path ./.eslintignore --ext .js,.ts,.tsx,.json ."
+    "lint": "yarn eslint -c .eslintrc.js . && ./node_modules/.bin/lerna run --parallel lint"
   },
   "prettier": {
     "printWidth": 120,
@@ -39,14 +45,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+      "pre-commit": "yarn lint && lint-staged",
+      "pre-push": "format:verify",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.{ts,tsx,md,json,js,jsx,css}": [
-      "yarn format:verify",
-      "yarn lint"
+      "yarn format"
     ]
   }
 }
